@@ -1,0 +1,130 @@
+.whole {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(102, 206, 175);
+  box-shadow: 0 0 3px #000;
+  z-index: 20;
+}
+
+.nav-wrapper {
+  display: flex;
+  /* 요소가 1차원으로 정렬됨 */
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 16px;
+}
+
+.nav-start {
+  margin-left: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.nav-icon {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  margin-left: 6px;
+}
+
+.nav-center {
+  width: 50%;
+}
+
+.nav-form {
+  display: flex;
+  max-width: 100%;
+}
+
+.nav-click-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 16px;
+}
+
+.nav-click {
+  width: calc(100% - 60px);
+  height: 40px;
+  padding: 0 6px;
+  border: 0.5px solid rgb(195, 195, 195);
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  background-color: rgb(219, 241, 235);
+}
+
+select{
+  width: calc(100% - 60px);
+  height: 40px;
+  padding: 0 6px;
+  border: 0.5px solid rgb(195, 195, 195);
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+  background-color: rgb(219, 241, 235);
+}
+
+.nav-click-button {
+  width: 120px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.nav-end {
+  display: flex;
+  margin-right: 20px;
+}
+
+.nav-bookmark {
+  color: #ff0000;
+  display: block;
+  margin-right: 10px;
+  border: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+.nav-profile {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  background-image: url(../public/1.png);
+  background-size: 40px 40px;
+}
+
+
+@media screen and (max-width : 700px) {
+  .nav-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .nav-center {
+    display: none;
+  }
+}
+
+.container {
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

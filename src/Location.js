@@ -5,17 +5,33 @@ import { markerdata } from "./data/markerData";
 const Location = () => {
   useEffect(() => {
     const container = document.getElementById('location');
+
     const options = {
       center: new kakao.maps.LatLng(37.365264512305174, 127.10676860117488),
-      level: 3
+      level: 4
     };
     const map = new kakao.maps.Map(container, options);
 
-    /* 
-    주소-좌표 변환 객체: 주소가 들어가면 좌표가 나오는건데 안쓸거같지만 유용해보여서
-    const geocoder = new kakao.maps.services.Geocoder();
-    */
+    /* 현재 위치 표시 */
 
+    // function getCurrentPos() {
+    //   navigator.geolocation.getCurrentPosition(function (pos) {
+    //     let curLat = pos.coords.latitude, curLon = pos.coords.longitude;
+    //     let curPos = new kakao.maps.LatLng(curLat, curLon);
+
+    //     displayMarker(curPos);
+    //   });
+
+    //   function displayMarker(curPos){
+    //     // const curMarker = new kakao.maps.Marker({
+    //     //   map: map,
+    //     //   position: curPos
+    //     // });
+    //     map.setCenter(curPos);
+    //   }
+    // }
+
+    /* 데이터 보여주기 */
     markerdata.forEach((el) => {
       const marker = new kakao.maps.Marker({
         map: map,
@@ -53,11 +69,23 @@ const Location = () => {
   }, [])
 
 
+
   return (
     <div>
-      <div id="location" style={{ width: "100%", height: "100vh" }}></div>
+      <div id="location" style={{ width: "100%", height: "80vh" }}></div>
+      <div className='MapControlView'>
+        <div className='accessLocation'>
+          <span className='screen_out'>현위치</span>
+          <span className='coach_accessLocation'></span>
+        </div>
+      </div>
     </div>
   )
 }
 
 export default Location;
+
+/*
+  주소-좌표 변환 객체: 주소가 들어가면 좌표가 나오는건데 안쓸거같지만 유용해보여서
+  const geocoder = new kakao.maps.services.Geocoder();
+*/

@@ -1,16 +1,17 @@
+body {
+  /* background-color: rgb(176, 224, 238); */
+  margin: 0;
+}
+
 .whole {
-  overflow-x: hidden;
-  overflow-y: auto;
+  padding-bottom: 13px;
 }
 
 .nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgb(102, 206, 175);
-  box-shadow: 0 0 3px #000;
-  z-index: 20;
+  margin: 0 auto;
+  width: 68%;
+  /* background-color: rgb(176, 224, 238); */
+  border-radius: 30px;
 }
 
 .nav-wrapper {
@@ -18,70 +19,26 @@
   /* 요소가 1차원으로 정렬됨 */
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  padding: 0 16px;
+  height: 50px;
+  margin-top: 1vh;
 }
 
 .nav-start {
+  display: flex;
   margin-left: 20px;
   height: 40px;
   line-height: 40px;
 }
 
 .nav-icon {
-  border: none;
-  background-color: transparent;
-  font-size: 1.5rem;
+  width: 40px;
+  height: 35px;
 }
 
 .nav-title {
-  font-size: 1.5rem;
-  margin-left: 6px;
-}
-
-.nav-center {
-  width: 50%;
-}
-
-.nav-form {
-  display: flex;
-  max-width: 100%;
-}
-
-.nav-click-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
-  padding: 0 16px;
-}
-
-.nav-click {
-  width: calc(100% - 60px);
-  height: 40px;
-  padding: 0 6px;
-  border: 0.5px solid rgb(195, 195, 195);
-  border-right: none;
-  border-radius: 2px 0 0 2px;
-  background-color: rgb(219, 241, 235);
-}
-
-select{
-  width: calc(100% - 60px);
-  height: 40px;
-  padding: 0 6px;
-  border: 0.5px solid rgb(195, 195, 195);
-  border-right: none;
-  border-radius: 2px 0 0 2px;
-  background-color: rgb(219, 241, 235);
-}
-
-.nav-click-button {
-  width: 120px;
-  height: 40px;
-  border: 0;
-  font-size: 20px;
-  background-color: transparent;
+  font-size: 2rem;
+  margin-left: 10px;
+  font-family: 'Black Han Sans', sans-serif;
 }
 
 .nav-end {
@@ -90,9 +47,8 @@ select{
 }
 
 .nav-bookmark {
-  color: #ff0000;
   display: block;
-  margin-right: 10px;
+  padding-right: 2.5vw;
   border: none;
   font-size: 1.5rem;
   background-color: transparent;
@@ -101,30 +57,115 @@ select{
 .nav-profile {
   width: 40px;
   height: 40px;
-  border: 1px solid #eaeaea;
+  border: 1px solid #ffffff;
   border-radius: 50%;
   background-image: url(../public/1.png);
   background-size: 40px 40px;
 }
 
-
-@media screen and (max-width : 700px) {
-  .nav-title {
-    display: none;
-  }
+.select {
+  margin: 4vh 30vw 0 30vw;
 }
 
-@media screen and (max-width: 300px) {
-  .nav-center {
-    display: none;
-  }
+.nav-select-wrapper {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  height: 30px;
+}
+
+.select-1 {
+  width: calc(100% - 40px);
+  height: 45px;
+  padding: 0 6px;
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 20px 0 0 20px;
+  background-color: rgb(218, 247, 255);
+  border-right: none;
+  font-family: 'Jua', sans-serif;
+  font-size: 1rem;
+}
+
+.select-2 {
+  width: calc(100% - 40px);
+  height: 45px;
+  padding: 0 6px;
+  border: 0.5px solid rgb(255, 255, 255);
+  background-color: rgb(218, 247, 255);
+  font-family: 'Jua', sans-serif;
+  font-size: 1rem;
+}
+
+.select-3 {
+  width: calc(100% - 40px);
+  height: 45px;
+  padding: 0 6px;
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(218, 247, 255);
+  border-left: none;
+  font-family: 'Jua', sans-serif;
+  font-size: 1rem;
+}
+
+.nav-select-button {
+  width: 120px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+select {
+  text-align: center;
 }
 
 .container {
-  width: 100%;
-  position: fixed;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-wrapper {
+  margin: 2vh 17vw 0 17vw;
+  border-radius: 10px;
+}
+
+.MapControlView {
+  position: absolute;
+  bottom: 5vh;
+  right: 18vw;
+  z-index: 420;
+  width: 38px;
+}
+
+.MapControlView .accessLocation {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 1px 3px 5px;
+  background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/img_search.png) no-repeat -150px -450px;
+}
+
+.screen_out {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.MapControlView .accessLocation .coach_accessLocation {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 3px;
+  right: 40px;
+  width: 52px;
+  height: 28px;
+  font-size: 0;
+  line-height: 0;
+  background: url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/common/img_coachMark.png) no-repeat 0 -40px;
+  text-indent: -9999px;
 }

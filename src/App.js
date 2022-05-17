@@ -70,7 +70,7 @@ function Select(props) {
           </select>
 
           {/* 검색이 필요한가? */}
-          <button className="nav-select-button">🏸</button>
+          {/* <button className="nav-select-button">🏸</button> */}
         </div>
       </form>
     </div>

@@ -34,12 +34,17 @@ const Location = () => {
 
     /* 데이터 보여주기 */
     // lat->latitude, lng->longitude, title->place
+
+    let markers = [];
+
     markerdata.forEach((el) => {
       const marker = new kakao.maps.Marker({
-        map: map,
         position: new kakao.maps.LatLng(el.LATITUDE, el.LONGITUDE),
       });
-
+      
+      marker.setMap(map);
+      markers.push(marker);
+      
       let infowindow = new kakao.maps.InfoWindow({
         content: el.PLACE, // 인포윈도우에 표시할 내용
       });
@@ -68,6 +73,8 @@ const Location = () => {
         infowindow.close();
       };
     }
+
+
   }, [])
 
 

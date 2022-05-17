@@ -69,8 +69,6 @@ function Select(props) {
             <option value="3">2만 이상 </option>
           </select>
 
-          {/* 검색이 필요한가? */}
-          {/* <button className="nav-select-button">🏸</button> */}
         </div>
       </form>
     </div>

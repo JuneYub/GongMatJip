@@ -7,8 +7,9 @@ const Location = () => {
     const container = document.getElementById('location');
 
     const options = {
-      center: new kakao.maps.LatLng(37.365264512305174, 127.10676860117488),
-      level: 4
+      // 초기값 동작구청 
+      center: new kakao.maps.LatLng(37.512462244674055, 126.93936257789952),
+      level: 5
     };
     const map = new kakao.maps.Map(container, options);
 
@@ -32,14 +33,15 @@ const Location = () => {
     // }
 
     /* 데이터 보여주기 */
+    // lat->latitude, lng->longitude, title->place
     markerdata.forEach((el) => {
       const marker = new kakao.maps.Marker({
         map: map,
-        position: new kakao.maps.LatLng(el.lat, el.lng),
+        position: new kakao.maps.LatLng(el.LATITUDE, el.LONGITUDE),
       });
 
       let infowindow = new kakao.maps.InfoWindow({
-        content: el.title, // 인포윈도우에 표시할 내용
+        content: el.PLACE, // 인포윈도우에 표시할 내용
       });
 
       // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록
